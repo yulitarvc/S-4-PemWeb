@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+	<script>
+		function hitung() {
+			// Ambil nilai dari input dengan id "bil1" dan "bil2"
+			var bil1 = Number(document.getElementById("bil1").value);
+			var bil2 = Number(document.getElementById("bil2").value);
+
+			// Ambil nilai dari tombol operator yang dipilih
+			var operator = document.getElementById("operator").value;
+
+			// Hitung hasilnya berdasarkan operator yang dipilih
+			if (operator == "+") {
+				document.getElementById("hasil").value = bil1 + bil2;
+			} else if (operator == "-") {
+				document.getElementById("hasil").value = bil1 - bil2;
+			} else if (operator == "x") {
+				document.getElementById("hasil").value = bil1 * bil2;
+			} else if (operator == "/") {
+				document.getElementById("hasil").value = bil1 / bil2;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Kalkulator Sederhana</h1>
+	<p>Masukkan dua bilangan di bawah ini:</p>
+	<input type="text" id="bil1"> <br><br>
+	<input type="text" id="bil2"> <br><br>
+	<p>Pilih operator:</p>
+	<select id="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="x">x</option>
+		<option value="/">/</option>
+	</select> <br><br>
+	<button onclick="hitung()">Hitung</button>
+	<p>Hasil:</p>
+	<input type="text" id="hasil">
+</body>
+</html>
