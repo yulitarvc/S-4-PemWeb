@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Effect</title>
+	<style>
+		#box {
+			width: 200px;
+			height: 150px;
+			background-color: yellow;
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"> </div>
+    <br>
+	<button onclick="fadeOut()">Fade Out</button>
+	<button onclick="fadeIn()">Fade In</button>
+	<button onclick="fadeTo()">Fade To 0.3</button>
+
+	<script>
+		var box = document.getElementById("box");
+
+		function fadeOut() {
+			box.style.opacity = 0;
+		}
+
+		function fadeIn() {
+			box.style.opacity = 1;
+		}
+
+		function fadeTo() {
+			box.style.opacity = 0.3;
+		}
+	</script>
+</body> </html>

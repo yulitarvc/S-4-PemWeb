@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Double Click Event</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			margin: 10px;
+			float: left;
+			text-align: center;
+			color: white;
+			font-size: 24px;
+			line-height: 100px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+    <p>klik 2x pada kotak untuk mengubah warnanya</p>
+	<div class="box" ondblclick="changeColor(this)"></div>
+	<div class="box" ondblclick="changeColor(this)"></div>
+	<div class="box" ondblclick="changeColor(this)"></div>
+    <div class="box" ondblclick="changeColor(this)"></div>
+
+	<script>
+		function changeColor(element) {
+			var colors = ["red", "green", "yellow", "orange", "purple", "pink", "teal"];
+			var randomColor = colors[Math.floor(Math.random() * colors.length)];
+			element.style.backgroundColor = randomColor;
+		}
+	</script>
+</body>
+</html>
